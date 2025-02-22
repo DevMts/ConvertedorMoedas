@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <script type="module" src="dist/ts/main.js"></script>
+</head>
+
+<body class="bg-sky-400 flex flex-col items-center justify-center h-dvh px-4 sm:px-0">
+    <section class="">
+        <h1 class="font-semibold font-poppins text-gray-50 tracking-wider text-3xl">converta seu valor</h1>
+        <form class="bg-gray-50 rounded-xl px-4 py-4 flex gap-6 flex-col items-center justify-center" id="form">
+            <div class="w-full">
+                <label class=" font-roboto  text-gray-700 text-[0.9rem] font-medium mb-2" for="grid-state">
+                    Moeda Final
+                </label>
+                <div class="relative">
+                    <select
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2.5 px-4 pr-8 rounded leading-tight shadow  focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="grid-state" name="sourceCurrency">
+                        <option value="" disabled selected> Selecione a moeda</option>
+                        <option value="BRL" class="BRL"> Real</option>
+                        <option value="USD" class="USD"> Dólar</option>
+                        <option value="EUR" class="EUR"> Euro</option>
+                        <option value="BTC" class="BTC"> Bitcoin</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full">
+                <label class=" font-roboto  text-gray-700 text-[0.9rem] font-medium mb-2" for="grid-state">
+                    Valor da Moeda que irá ser convertida:
+                </label>
+                <div class="relative">
+                    <input type="number" name="sourceAmount" id="number"
+                        class="w-full bg-gray-200 border border-gray-200 text-gray-700 py-2.5 pl-4 pr-2 shadow rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        placeholder="0,00">
+                </div>
+            </div>
+            <div class="w-full">
+                <label class=" font-roboto  text-gray-700 text-[0.9rem] font-medium mb-2" for="grid-state">
+                    Moeda Inicial
+                </label>
+                <div class="relative">
+                    <select
+                        class="block appearance-none w-full shadow bg-gray-200 border border-gray-200 text-gray-700 py-2.5 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="grid-state" name="targetCurrency">
+                        <option value="" disabled selected> Selecione a moeda</option>
+                        <option value="BRL" class="BRL"> Real</option>
+                        <option value="USD" class="USD"> Dólar</option>
+                        <option value="EUR" class="EUR"> Euro</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <button
+                    class="bg-sky-500 px-8 py-4 mt-2 rounded font-poppins font-semibold text-gray-50 hover:bg-sky-600" id="submit">ENVIAR</button>
+            </div>
+            <div class="w-full text-center">
+                <span class="font-roboto">Resultado</span>
+                <p class="font-poppins text-4xl font-medium" id="result">BTC 0.565</p>
+            </div>
+        </form>
+    </section>
+    <script type="module" src="./dist/ts/main.js"></script>
+</body>
+
+</html>
